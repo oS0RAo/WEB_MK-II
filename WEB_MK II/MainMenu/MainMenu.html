@@ -1,36 +1,16 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagination Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div id="content">
-            <!-- Content from different folders will be loaded here -->
-            <p>Welcome to Page 1</p>
-        </div>
-
-        <div class="pagination">
-            <button onclick="loadPage('66110385\index.html')">Page 1</button>
-            <button onclick="loadPage('Personal_1\page2.html')">Page 2</button>
-        </div>
+    <h1>Main Menu</h1>
+    <div class="menu">
+        <a href="66110385/index.html">นางสาว รรินทร์ธร ช่างกล่อม</a><br>
+        <a href="Personal_1/index.html">นาย ชยานันต์ อินามิ</a>
     </div>
-
-    <script>
-        function loadPage(page) {
-            fetch(page)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error loading page:', error);
-                    document.getElementById('content').innerHTML = '<p>Error loading content</p>';
-                });
-        }
-    </script>
 </body>
 </html>
